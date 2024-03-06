@@ -1,0 +1,30 @@
+/* Reset CSS - Excluyendo etiquetas de texto */
+/* Solo reinicia márgenes, rellenos y bordes para ciertos elementos */
+/* No afecta a las etiquetas de texto como h1, h2, p, etc. */
+
+/* Reiniciar márgenes, rellenos y bordes */
+html, body, div, span, object, iframe, 
+blockquote, pre, code, address,
+h1, h2, h3, h4, h5, h6, ul, ol, li,
+fieldset, form, label, legend, 
+table, caption, tbody, tfoot, thead, tr, th, td {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    vertical-align: baseline;
+}
+
+/* Establecer la caja del modelo como border-box */
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+
+/* Eliminar estilos por defecto para listas */
+ol, ul {
+    list-style: none;
+}
+
+/* Eliminar el espacio en línea para bloques */
+body, h1, h2, h3, h4, h5, h6, p {
+    margin-bottom: 0;
+}
