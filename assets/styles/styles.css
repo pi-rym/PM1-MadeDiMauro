@@ -13,18 +13,28 @@ header, main, footer {
 
 h2 {
     color: F3EEEA;
+    font-size: 30px;
+    font-weight: 900;
+}
+
+p {
+    font-size: 20px;
+    text-align: justify;
 }
 
 .header {
     margin: 0 auto;
-    padding: 50px;
+    padding: 50px 50px 10px 50px;
     text-align: center;
 }
 
 .title {
-    font-size: 50px;
-    font-weight: 400;
-    font-family: "Mochiy Pop One", sans-serif;
+    font-size: 65px;
+    font-family: "Noto Sans", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 900;
+    font-style: normal;
+    font-variation-settings: "wdth" 100;
     color: #63B7AF
 }
 
@@ -77,15 +87,26 @@ h2 {
 }
 
 .container > div  {
-    background-color: #35495E;
+    background-color: #2d3250c7;
     padding: 15px 25px 15px 25px;
     border-radius: 6px;
+    filter: grayscale(80%);
+    transition: filter 1s ease;
+}
+
+.container > div:hover {
+    filter: grayscale(0%);
+    background-color: #2d3250af;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    transition: filter 1s ease;
 }
 
 .img {
     width: 200px;
     height: auto;
 }
+
+
 
 form {
     display: flex;
@@ -125,12 +146,12 @@ form > div > button {
     width: 70%;
     height: 50px;
     margin: 10px 0px 30px 0px; 
-    background-color: #2D3250;
+    background-color: #2d3250e5;
     border-radius: 10px;
     border: 0px;
     font-family: "Helvetica", sans-serif;
     font-size: 20px;
-    color: lightgray;
+    color: #369090;
 } 
 
 input[type="text"]::placeholder {
@@ -150,6 +171,7 @@ textarea::placeholder {
 }
 
 div > span {
+    font-size: 20px;
     display: flex;
     justify-content: center;
 }
