@@ -3,19 +3,24 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" type="text/css" href="./styles/reset.css" />
-    <link rel="stylesheet" type="text/css" href="./styles/styles.css" />
+    <link rel="stylesheet" type="text/css" href="./assets/styles/reset.css" />
+    <link rel="stylesheet" type="text/css" href="./assets/styles/styles.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Mochiy+Pop+One&family=Oleo+Script:wght@400;700&display=swap" rel="stylesheet">
     <title>Mi pagina web</title>
 </head>
 <body>
     <header>
-        <h1 class="titulo">Madeleine Di Mauro</h1>
-        <h4 class="subtitulo">Mi página web</h4>
+        <div class="header">
+            <h1 class="title">Madeleine Di Mauro</h1>
+            <h2 class="subtitle">Mi página web</h2>
+        </div>
     </header>
     <main>
         <section>
-            <div class="descripcion">
-                <h1>¿Quien soy?</h1>
+            <div class="description">
+                <h2>¿Quien soy?</h2>
                 <p>
                     Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
                     Sed non risus. Suspendisse lectus tortor, dignissim sit amet, 
@@ -29,30 +34,72 @@
             </div>
         </section>
         <section>
-            <div class="tecnologias">
-                <h1>Mis tecnologias favoritas</h1>
-                <div class="contenedor">
+            <div class="technologies">
+                <h2>Mis tecnologias favoritas</h2>
+                <div class="container">
                     <div>
-                        <img src="">
+                        <h6>HTML</h6>
+                        <img class="img" src="./assets/images/icon-html.png">
                     </div>
                     <div>
-                        <img src="">
+                        <h6>JAVASCRIPT</h6>
+                        <img class="img" src="./assets/images/icon-javascript.png">
                     </div>
                     <div>
-                        <img src="">
+                        <h6>CSS</h6>
+                        <img class="img" src="./assets/images/icon-css.png">
+                    </div>
+                    <div>
+                        <h6>GITHUB</h6>
+                        <img class="img" src="./assets/images/icon-github.png">
+                    </div>
+                    <div>
+                        <h6>REACT</h6>
+                        <img class="img" src="./assets/images/icon-react.png">
+                    </div>
+                    <div>
+                        <h6>JAVA</h6>
+                        <img class="img" src="./assets/images/icon-java.png">
+                    </div>
+                    <div>
+                        <h6>POSTGRES SQL</h6>
+                        <img class="img" src="./assets/images/icon-postgres-sql.png">
+                    </div>
+                    <div>
+                        <h6>MYSQL</h6>
+                        <img class="img" src="./assets/images/icon-mysql.png">
+                    </div>
+                    <div>
+                        <h6>NODEJS</h6>
+                        <img class="img" src="./assets/images/icon-nodejs.png">
                     </div>
                 </div>
                 
             </div>
         </section>
         <section>
-            <div class="actividades">
-
+            <div class="activities">
+                <h2>Mis actividades favoritas</h2>
+                <form action="" method="">
+                    <div>
+                        <input type="text" placeholder="Ingrese el nombre de la actividad" id="title-activity"/>
+                    </div>
+                    <div>
+                        <textarea  rows="8" cols="80" placeholder="Ingrese una descripción" id="description-activity"></textarea>
+                    </div>
+                    <div>
+                        <input type="text" placeholder="Ingrese el link de la imagen" id="link-activity">
+                    </div>
+                    <div class="container-button">
+                        <button type="submit">Agregar actividad</button>
+                    </div>
+                </form>
+                <div><span>Sin actividades por el momento</span></div>
             </div>
         </section>
     </main>
     <footer>
-        Todos los derechos reservado :)
+        <div><span>Todos los derechos reservados :)</span></div>
     </footer>
 </body>
 </html>
