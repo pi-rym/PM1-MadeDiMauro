@@ -1,11 +1,35 @@
+:root {
+    --color-primario: #FF847C; 
+    --color-secundario: #EB4A5F;
+    --color-fondo: #2A363B;
+    --color-section: #05050559;
+
+    --color-items: #05050559;
+    --color-item-focus: 0px 1px 20px rgba(230, 65, 122, 0.663);
+
+    --color-form-inputs: #05050592;
+    --color-input-focus: 0px 1px 20px rgba(230, 65, 122, 0.663);
+
+    --color-button:  #eb4a60ab;
+    --color-button-texto: #ffe5e9d1;
+    --color-button-hover: #EB4A5F;
+    --color-button-focus:0px 1px 20px rgba(132, 36, 69, 0.875);
+
+    --color-titulo-principal: #F2F2F2;
+    --color-subtitulos: #ff94a2;
+    --color-texto-transparent: #f2f2f278;
+    --color-texto: #F2F2F2;
+  }
+
 body {
-    background-color: #2D3250;
+    background-image: radial-gradient(circle at 120.71% 50%, #bd7253 0, #be6953 8.33%, #bd5f52 16.67%, #bb5553 25%, #b84953 33.33%, #b43b54 41.67%, #ae2c56 50%, #a71a59 58.33%, #9f005d 66.67%, #960062 75%, #8c0068 83.33%, #80006f 91.67%, #720077 100%);
     font-family: "Helvetica", sans-serif;
-    color: lightgrey;
+    color: var(--color-texto);
 }
 
 header, main, footer {
-    width: 70vw;
+    width: 1600px;
+    max-width: 1600px;
     height: 100%;
     margin: 0 auto;
     padding: 2em;
@@ -35,30 +59,38 @@ p {
     font-weight: 900;
     font-style: normal;
     font-variation-settings: "wdth" 100;
-    color: #63B7AF
+    color: var(--color-titulo-principal);
 }
 
 .subtitle {
     font-size: 30px;
     font-weight: 500;
-    color: #EEEEEE;
+    color: var(--color-texto);
 }
 
 .description {
     padding: 50px;
     width: 80%;
     margin: 0 auto;
-    background-color: #347474;
+    background-color:var(--color-section);
     border-radius: 7px;
+}
+
+.description > h2 {
+    color: var(--color-subtitulos);
 }
 
 .technologies {
     padding: 50px;
     width: 80%;
     margin: 0 auto;
-    background-color: #347474;
+    background-color: var(--color-section);
     margin-top: 40px;
     border-radius: 7px;
+}
+
+.technologies > h2 {
+    color: var(--color-subtitulos);
 }
 
 .container {
@@ -83,21 +115,25 @@ p {
     margin: 0 auto;
     margin-top: 40px;
     border-radius: 7px;
-    background-color: #347474;
+    background-color:var(--color-section);
+}
+
+.activities > h2 {
+    color: var(--color-subtitulos);
 }
 
 .container > div  {
-    background-color: #2d3250c7;
+    background-color:var();
     padding: 15px 25px 15px 25px;
     border-radius: 6px;
-    filter: grayscale(80%);
+    filter: grayscale(100%);
     transition: filter 1s ease;
 }
 
 .container > div:hover {
     filter: grayscale(0%);
-    background-color: #2d3250af;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    background-color: var(--color-items);
+    box-shadow: var(--color-item-focus);
     transition: filter 1s ease;
 }
 
@@ -119,22 +155,72 @@ form > div {
     width: 100%;
 }
 
+
 form > div > input {
     width: 100%;
     height: 50px;
     margin: 10px 0px 10px 0px; 
-    background-color: #35495E;
+    background-color: var(--color-form-inputs);
     border-radius: 5px;
     border: 0px;
+    color: var(--color-texto);
+    padding-left: 12px;
+    font-style:normal; 
+    font-family: "Helvetica", sans-serif;
 }
+
+form > div > input:focus {
+    outline: none;
+    box-shadow: var(--color-input-focus);
+}
+
+
+form > div > input::placeholder {
+    color: var(--color-texto-transparent);
+    font-size: 16px;
+    font-style:normal; 
+    font-family: "Helvetica", sans-serif;
+    padding-left: 12px;
+}
+
+form > div > input:focus::placeholder {
+    color: transparent;
+    transition: filter 1s ease;
+}
+
+
 
 form > div > textarea {
     margin: 10px 0px 10px 0px; 
-    background-color: #35495E;
+    background-color: var(--color-form-inputs);
     border-radius: 5px;
     width: 100%;
     border: 0px;
+    color: var(--color-texto);
+    padding: 12px 0px 0px 12px;
+    font-style:normal; 
+    font-family: "Helvetica", sans-serif;
 }
+
+form > div > textarea:focus {
+    outline: none;
+    box-shadow: var(--color-input-focus);
+}
+
+form > div > textarea::placeholder {
+    color: var(--color-texto-transparent);
+    font-size: 16px;
+    font-style:normal; 
+    font-family: "Helvetica", sans-serif;
+    padding: 12px 0px 0px 12px;
+}
+
+form > div > textarea:focus::placeholder {
+    color: transparent;
+    transition: filter 1s ease;
+}
+
+
 
 .container-button {
     display: flex;
@@ -142,33 +228,22 @@ form > div > textarea {
     align-items: center; 
 }
 
+
 form > div > button {
-    width: 70%;
+    width: 30%;
     height: 50px;
     margin: 10px 0px 30px 0px; 
-    background-color: #2d3250e5;
+    background-color:  var(--color-button);
     border-radius: 10px;
     border: 0px;
     font-family: "Helvetica", sans-serif;
     font-size: 20px;
-    color: #369090;
+    color: var(--color-button-texto);
 } 
-
-input[type="text"]::placeholder {
-    color: lightgray;
-    font-size: 16px;
-    font-style:normal; 
-    font-family: "Helvetica", sans-serif;
-    padding-left: 12px;
-}
-
-textarea::placeholder {
-    color: lightgray;
-    font-size: 16px;
-    font-style:normal; 
-    font-family: "Helvetica", sans-serif;
-    padding: 12px 0px 0px 12px;
-}
+form > div > button:hover {
+    background-color: var(--color-button-hover);
+    box-shadow: var(--color-button-focus);
+} 
 
 div > span {
     font-size: 20px;
