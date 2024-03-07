@@ -13,7 +13,7 @@
     --color-button:  #eb4a60ab;
     --color-button-texto: #ffe5e9d1;
     --color-button-hover: #EB4A5F;
-    --color-button-focus:0px 1px 20px rgba(132, 36, 69, 0.875);
+    --color-button-focus:0px 1px 10px rgba(84, 0, 29, 0.96);
 
     --color-titulo-principal: #F2F2F2;
     --color-subtitulos: #ff94a2;
@@ -172,8 +172,12 @@ form > div > input {
 form > div > input:focus {
     outline: none;
     box-shadow: var(--color-input-focus);
+    transition: 1s;
 }
 
+form > div > input:not(:focus):not(:hover) {
+    transition: 1s;
+}
 
 form > div > input::placeholder {
     color: var(--color-texto-transparent);
@@ -200,11 +204,16 @@ form > div > textarea {
     padding: 12px 0px 0px 12px;
     font-style:normal; 
     font-family: "Helvetica", sans-serif;
+    transition: 1s;
 }
 
 form > div > textarea:focus {
     outline: none;
     box-shadow: var(--color-input-focus);
+}
+
+form > div > textarea:not(:focus):not(:hover) {
+    transition: 1s;
 }
 
 form > div > textarea::placeholder {
@@ -243,6 +252,7 @@ form > div > button {
 form > div > button:hover {
     background-color: var(--color-button-hover);
     box-shadow: var(--color-button-focus);
+    transition: 1s;
 } 
 
 div > span {
