@@ -82,27 +82,28 @@
         <section>
             <div class="activities">
                 <h2>Mis actividades favoritas</h2>
-                <form action="" method="">
+                <form>
                     <div>
-                        <input type="text" placeholder="Ingrese el nombre de la actividad" id="title-activity"/>
+                        <input type="text" placeholder="Ingrese el nombre de la actividad" id="titleActivity"/>
                     </div>
                     <div>
-                        <textarea  rows="8" cols="80" placeholder="Ingrese una descripción" id="description-activity"></textarea>
+                        <textarea  rows="8" cols="80" placeholder="Ingrese una descripción" id="descriptionActivity"></textarea>
                     </div>
                     <div>
-                        <input type="text" placeholder="Ingrese el link de la imagen" id="link-activity">
+                        <input type="text" placeholder="Ingrese el link de la imagen" id="linkActivity">
                     </div>
                     <div class="container-button">
-                        <button type="submit">Agregar</button>
+                        <button id="buttonAdd">Agregar</button>
                     </div>
                 </form>
-                <div><span>Sin actividades por el momento</span></div>
+                <div><span id="alertNoActivities">Sin actividades por el momento</span></div>
+                <div id="containerCards"></div>
             </div>
         </section>
     </main>
     <footer>
         <div><span>Todos los derechos reservados :)</span></div>
     </footer>
+    <script src="./scripts/index.js"></script>
 </body>
-<script src="./scripts/index.js"/>
 </html>
